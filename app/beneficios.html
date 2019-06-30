@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta charset="utf-8">
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="css/style.css">
+      
+    </head>
+
+    <body style="margin:0px !important; padding:0px !important;background: white;">
+        <ul id="slide-out" class="sidenav" style="z-index: 99999999; background-color: green; transform: translateX(-105%); opacity: .6">
+            <li><div class="user-view">
+              <a href="#user"><img class="circle" src="img/perfil.png"></a>
+              <a href="#name"><span class="white-text name">Joana Fagundes</span></a>
+              <a href="#email"><span class="white-text email">joana.fagundes@gmail.com</span></a>
+            </div></li>
+            <li><div class="divider" style="
+              width: 80%;
+              margin-left: 20px;
+          "></div></li>
+          
+            <li><a class="waves-effect" href="perfil.html">Perfil</a></li>
+            <li><a class="waves-effect" href="chats.html">Benefícios</a></li>
+            <li><a class="waves-effect" href="#!">Mapa</a></li>
+          </ul>
+            <div class="container" style="width:100%;height:auto;margin:auto;">
+                <header style="position:fixed;width:100%;height:auto;background-color:green !important;z-index: 99999;margin: 0px;padding: 0px;margin-top: -8px;">
+                    <a href="#" style="position: inherit;color:#fff;margin-top: 27px;
+                    margin-left: 10px;" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 36px;" class="material-icons">menu</i></a>
+                  <img style="width:30%; height: 30%;margin-left:40%;padding: 10px;" src="img/logo.png" alt="">
+                </header>
+                  <a href="#" style="position: inherit;color:green;margin-top: 10px;
+                  margin-left: 10px;" data-target="slide-out" class="sidenav-trigger"><i style="font-size: 36px;" class="material-icons">menu</i></a>
+
+                  <div class="contanier" style="width:95%;padding-left:20px;margin-top:70px; margin-bottom: 40px; position: absolute;">
+                         <span style="font-size:24px; color: green;">Horas economizadas: </span><span class="count" style="font-size:24px; color:green;">200</span>
+                         <div class = "beneficios" style="font-size: 30px; color: green; ">
+                           Benefícios
+                        </div>
+                         <ul class="collection" style="border:0px; color: green;">
+                                <li class="collection-item avatar">
+                                  <i class="material-icons circle">event_note</i>
+                                  <img src="images/yuna.jpg" alt="" class="circle">
+                                  <p>Ano passado você economizou: R$1.150<br>
+                                  </p>
+                                  <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+                                </li>
+                                <li class="collection-item avatar">
+                                  <i class="material-icons circle">event_note</i>
+                                  <p>Você evitou: 800h de congestionamento<br>
+                                  </p>
+                                  <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+                                </li>
+                                <li class="collection-item avatar">
+                                  <i class="material-icons circle green">insert_chart</i>
+                                  <p>Diminuiu o impacto de CO2 em: 3%<br>
+                                  </p>
+                                  <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+                                </li>
+                                <li class="collection-item avatar">
+                                  <i class="material-icons circle red">event_note</i>
+                                  <p>Evitou o tráfego: 34 vezes<br>
+                                  </p>
+                                  <a href="#!" class="secondary-content"><i class="material-icons">favorite</i></a>
+                                </li>
+                              </ul>
+
+                        
+                     
+                  </div>
+
+            </div>
+
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="js/descer_campo.js"></script>
+      <script>
+            $('.count').each(function () {
+              $(this).prop('Counter',0).animate({
+                  Counter: $(this).text()
+              }, {
+                  duration: 4000,
+                  easing: 'swing',
+                  step: function (now) {
+                      $(this).text(Math.ceil(now));
+                  }
+              });
+          });
+          </script>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });
+
+  // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+  // var collapsibleElem = document.querySelector('.collapsible');
+  // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+      </script>
+    </body>
+  </html>
