@@ -75,5 +75,6 @@
 }
 .collection .collection-item.avatar p {
     margin: 0;
-    color: #fff !important;
+    color: green; !important;
+
 }
